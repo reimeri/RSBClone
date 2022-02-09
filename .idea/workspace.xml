@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RSBBB:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9a934c9c-1df5-401c-be85-1862717f067b" name="Default Changelist" comment="Revised RSObject to better document and fix getDef (this is totally not the first time I've written those words)&#10;Revised a number of classes to remove Javadoc errors and improved commenting on classes such as RSTile &#10;The general use case by most plugins appears to be similar, so we're going to revert to that use case. If issues appear we'll need to see what thread exactly is making that call I suppose.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rsb/botLauncher/RuntimeConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rsb/script/TestScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rsb/script/TestScriptManifest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$ConfigFileConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite$ConfigFileConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/botLauncher/RuneLite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/event/EventMulticaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/event/EventMulticaster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/BotModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/BotModule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/InputManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/InputManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/wrappers/Filter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/internal/wrappers/Filter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Bank$ReachableBankerFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Bank$ReachableBankerFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Calculations.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Calculations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Camera$ROTATION_METHOD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Camera$ROTATION_METHOD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Camera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/GrandExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/GrandExchange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Interfaces.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Interfaces.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Inventory$1Selector.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Inventory$1Selector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Mouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/methods/Mouse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/util/Base64.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/util/Base64.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/util/OutputObjectComparer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/util/OutputObjectComparer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/util/OutputObjectComparer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/util/OutputObjectComparer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/util/SkillTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/util/SkillTracker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSObject$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSObject$Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSTile$NoPlaneException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSTile$NoPlaneException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSTile.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/rsb/wrappers/RSTile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsb/botLauncher/RuneLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsb/botLauncher/RuneLite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsb/internal/BotModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsb/internal/BotModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rsb/plugin/ScriptSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rsb/plugin/ScriptSelector.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="RSBBB" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/botLauncher/RuneLite.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/botLauncher/Application.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/botLauncher/ClassPreloader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/util/AccountStore.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/internal/globval/GlobalConfiguration.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/internal/globval/GlobalWidgetId.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rsb/methods/Environment.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1lnUdVLSWmkt81J803IojbTxJKT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0963939" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="rsb.botLauncher" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaggar\IdeaProjects\RSBBB\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gigia\IdeaProjects\RSB\src\main\resources\rsb\plugins" />
+      <recent name="C:\Users\gigia\IdeaProjects\RSB\src\main\resources\rsb" />
+      <recent name="C:\Users\gigia\IdeaProjects\RSB\src\main\resources" />
+      <recent name="C:\Users\gigia\IdeaProjects\RSB\src\main\java\rsb\plugin" />
+      <recent name="C:\Users\gigia\IdeaProjects\RSB\src\main\java\rsb\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rsb.script" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rsb.botLauncher.Application" />
+      <module name="RSBBB.main" />
+      <option name="PROGRAM_PARAMETERS" value="--bot-runelite --developer-mode" />
+      <option name="VM_PARAMETERS" value="-debug" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rsb.botLauncher.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RSB [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RSB [buildNeeded]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildNeeded" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RSB [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RSB [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RSB [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RSB [jar]" />
+        <item itemvalue="Gradle.RSB [clean]" />
+        <item itemvalue="Gradle.RSB [build]" />
+        <item itemvalue="Gradle.RSB [buildNeeded]" />
+        <item itemvalue="Gradle.RSB [buildDependents]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9a934c9c-1df5-401c-be85-1862717f067b" name="Default Changelist" comment="" />
+      <created>1608232435561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608232435561</updated>
+      <workItem from="1644430148711" duration="46000" />
+      <workItem from="1644430522863" duration="499000" />
+      <workItem from="1644424846961" duration="3233000" />
+    </task>
+    <task id="LOCAL-00001" summary="API is now functional. Updated a plethora of methods and revised the hook class. Some widget ids are likely broken and will need revisiting. I should really check on the shoddy built-in compilation sometime.">
+      <created>1642044439045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642044439045</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Forgot a fairly important class">
+      <created>1642044472440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642044472440</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Modulated and revised Application.java and RuneLite.java">
+      <created>1642657590463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642657590463</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Prepped dependency changes and some misc things">
+      <created>1642726858114</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642726858114</updated>
+    </task>
+    <task id="LOCAL-00005" summary="gradle fix">
+      <created>1642728483128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642728483128</updated>
+    </task>
+    <task id="LOCAL-00006" summary="In progress update to how widget info should be stored and called">
+      <created>1642809302751</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1642809302751</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Continued to revise codebase to centralize WidgetIds&#10;Started prepping transitional stuff to enable resizable mode functionality">
+      <created>1642934734861</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1642934734861</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Skills and GrandExchange revised">
+      <created>1642938457804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1642938457804</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finished revising Prayer for widget id centralization">
+      <created>1642988306959</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1642988306959</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Revised the input location for scripts">
+      <created>1643013215040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643013215040</updated>
+    </task>
+    <task id="LOCAL-00011" summary="README.md update">
+      <created>1643157820111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643157820111</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix README.md">
+      <created>1643158023003</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643158023003</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added generated API reference">
+      <created>1643158453885</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1643158453885</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed legacy code, updated non-functional UI aspects to look significantly better, improved security functionality for the password/pin display as well as fixed a bug causing them to display if they were filled. Fixed a bug that required a client relaunch due to the model of the combobox for Account store not being updated. Revised README.md.">
+      <created>1643598457145</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643598457145</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="API is now functional. Updated a plethora of methods and revised the hook class. Some widget ids are likely broken and will need revisiting. I should really check on the shoddy built-in compilation sometime." />
+    <MESSAGE value="Forgot a fairly important class" />
+    <MESSAGE value="Modulated and revised Application.java and RuneLite.java" />
+    <MESSAGE value="Prepped dependency changes and some misc things" />
+    <MESSAGE value="gradle fix" />
+    <MESSAGE value="In progress update to how widget info should be stored and called" />
+    <MESSAGE value="Continued to revise codebase to centralize WidgetIds&#10;Started prepping transitional stuff to enable resizable mode functionality" />
+    <MESSAGE value="Skills and GrandExchange revised" />
+    <MESSAGE value="Finished revising Prayer for widget id centralization" />
+    <MESSAGE value="Revised the input location for scripts" />
+    <MESSAGE value="README.md update" />
+    <MESSAGE value="Fix README.md" />
+    <MESSAGE value="Added generated API reference" />
+    <MESSAGE value="Removed legacy code, updated non-functional UI aspects to look significantly better, improved security functionality for the password/pin display as well as fixed a bug causing them to display if they were filled. Fixed a bug that required a client relaunch due to the model of the combobox for Account store not being updated. Revised README.md." />
+    <MESSAGE value="Revised RSObject to better document and fix getDef (this is totally not the first time I've written those words)&#10;&#10;The general use case by most plugins appears to be similar, so we're going to revert to that use case. If issues appear we'll need to see what thread exactly is making that call I suppose." />
+    <MESSAGE value="Revised RSObject to better document and fix getDef (this is totally not the first time I've written those words)&#10;Revised a number of classes to remove Javadoc errors and improved commenting on classes such as RSTile &#10;The general use case by most plugins appears to be similar, so we're going to revert to that use case. If issues appear we'll need to see what thread exactly is making that call I suppose." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revised RSObject to better document and fix getDef (this is totally not the first time I've written those words)&#10;Revised a number of classes to remove Javadoc errors and improved commenting on classes such as RSTile &#10;The general use case by most plugins appears to be similar, so we're going to revert to that use case. If issues appear we'll need to see what thread exactly is making that call I suppose." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="net.runelite.client.plugins.PluginInstantiationException" package="net.runelite.client.plugins" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rsb/plugin/AccountManager.java</url>
+          <line>315</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rsb/plugin/AccountManager.java</url>
+          <line>311</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
